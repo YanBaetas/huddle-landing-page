@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --white: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("./images/bg-mobile.svg") no-repeat center top;
+  background-color: var(--violet);
+  font-family: "Open Sans", sans-serif;
+  padding: 2rem 1.3rem;
+  width: 100%;
+  min-height: 100%;
+}
+
+#header img {
+  width: 8rem;
+}
+
+#header {
+  align-self: flex-start;
+  margin-bottom: 3.3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 85vw;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.hero-banner {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.registration .registration-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.registration .registration-description {
+  margin-bottom: 3rem;
+}
+
+.registration .registration-link {
+  color: var(--violet);
+  background: var(--white);
+  text-decoration: none;
+  padding: 0.8rem 5rem;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+#footer .social-media {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+#footer .social-media ul {
+  transform: scale(0.8);
+}
+
+#footer .social-media ul li {
+  display: inline-block;
+  margin-left: 0.8rem;
+}
+
+#footer .social-media ul li a {
+  border: 1px solid var(--white);
+  display: block;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#footer .social-media img {
+  display: block;
+  max-width: 100%;
+  filter: brightness(0) invert(1);
+}
+
+#footer .social-media ul li a:hover {
+  border: 1px solid var(--soft-magenta);
+}
+
+#footer .social-media ul li a:hover img {
+  filter: invert(58%) sepia(99%) saturate(427%) hue-rotate(250deg)
+    brightness(105%) contrast(82%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 0 auto;
+}
+.attribution a {
+  color: var(--white);
+}
+
+@media only screen and (min-width: 1070px) {
+  body {
+    background: url("./images/bg-desktop.svg") no-repeat center center;
+    justify-content: space-between;
+    background-size: cover;
+    background-color: var(--violet);
+    padding: 2rem 4rem 0 4rem;
+    min-height: 100vh;
+  }
+  #header img {
+    margin-left: 2rem;
+    width: 12rem;
+  }
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0 2rem;
+  }
+  .hero-banner {
+    max-width: 60%;
+  }
+  .registration {
+    padding: 0 4rem 0 4rem;
+    text-align: left;
+  }
+  .registration .registration-title {
+    font-size: 2.6rem;
+    margin-top: 2.5rem;
+  }
+  .registration .registration-description {
+    margin-bottom: 3rem;
+  }
+  .registration .registration-link {
+    padding: 1.1rem 4rem;
+  }
+  .registration .registration-link:hover {
+    background: var(--soft-magenta);
+    color: var(--white);
+  }
+  #footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #footer .social-media {
+    margin: 0 4rem 0 0;
+  }
+}
+
+@media only screen and (min-width: 1070px) and (max-width: 1350px) {
+  body {
+    padding: 2rem 2rem 0 2rem;
+  }
+  .registration .registration-title {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+  }
+  .registration {
+    padding-right: 0;
+  }
+}
